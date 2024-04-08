@@ -119,16 +119,15 @@ class Producto:
         elif (1000.0 > self.__valorUnitario > 5000.0):
             self.__valorUnitario += self.__valorUnitario * 0.03
 
-    def HacerPedido(self):
-        if self.__cantidadBodega < self.__cantidadMinima:
-        else
+    def AumentarValorUnitario(self):
+        if self.__tipo == "DROGUERIA":
+            aumentar = self.__valorUnitario * 0.01
+        elif self.__tipo == "PAPELERIA":
+            aumentar = self.__valorUnitario * 0.02
+        elif self.__tipo == "SUPERMERCADO":
+            aumentar = self.__valorUnitario * 0.03
 
-    def ambiarValorUnitario(self):
-
-    def VenderProducto(self, nombre, cantidad):
-
-    def CuantosPapeleria(self):
-
+    
 
     #*Si el producto cuesta - de 1000 aumentar el 1%, si cuesta entre 1 y 5 mil aumenta el 2%, si cuesta ma s de 5000 el 3%
     #*Recibir un pedido solo si en la bodega se tiene menos unidades de las indicadas en el tope minimo, en caso contrario el metodo no debe hacer nada, el metodo se llama "Hace pedido" y tiene un parametro 
